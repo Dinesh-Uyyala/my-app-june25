@@ -45,4 +45,7 @@ Git:
     -> git remote add origin url
         check: git remote -v
 
-    -> 
+    -> git add .
+    -> git commit -m "commit message"
+    -> git push
+        ->git push --set-upstream origin master -f (for the 1st time)
