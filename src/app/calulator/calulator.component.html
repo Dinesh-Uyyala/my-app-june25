@@ -1,0 +1,10 @@
+<h1>Calculator</h1>
+
+<input type="number" placeholder="enter first number" [(ngModel)]="num1"><br>
+<input type="number" placeholder="enter second number" [(ngModel)]="num2"><br>
+<h3>{{result}}</h3>
+
+<button (click)="add()" [disabled]="!num1 || !num2">Add</button>
+<button (click)="sub()" [disabled]="!num1 || !num2">Sub</button>
+<button (click)="mul()" [disabled]="!num1 || !num2">Mul</button>
+<button (click)="div()" [disabled]="!num1 || !num2">Div</button>

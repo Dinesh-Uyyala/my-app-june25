@@ -3,14 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ClockComponent } from './clock/clock.component';
+import { CalulatorComponent } from './calulator/calulator.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    ClockComponent,
+    CalulatorComponent,
+    DataBindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
