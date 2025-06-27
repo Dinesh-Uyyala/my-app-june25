@@ -24,7 +24,10 @@
 <!-- <ol>
     <li *ngFor="let product of products">{{product.productName}}{{product.price}}{{product.rating}}</li>
 </ol> -->
-
+<h4>{{date }}</h4>
+<h4>{{date | date }}</h4>
+<h4>{{date | date:'dd/MM/yyyy' }}</h4>
+<h4>{{date | date:'hh:mm:ss' }}</h4>
 <table class="table table-info">
     <thead>
         <tr>
@@ -35,9 +38,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let product of products">
-            <td>{{product.productName}}</td>
+            <td>{{product.productName | lowercase }}</td>
             <td [ngStyle]="{'color':product.price>15000?'red':'green'}">
-                {{product.price}}</td>
+                {{product.price | currency }}</td>
             <td [ngClass]="{'red':product.rating<2.5,'yellow':
             ((product.rating>=2.5)&&(product.rating<4)),'green':product.rating>4}">
             {{product.rating}}</td>

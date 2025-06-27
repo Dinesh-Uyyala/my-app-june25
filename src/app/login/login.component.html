@@ -5,11 +5,19 @@
   /></span>
   <span class="input-span">
     <label for="password" class="label">Password</label>
-    <input type="password" name="password" id="password"
-  /></span>
+    <input [type]="isVisible?'text':'password'" name="password" id="password"
+  /><button (click)="visible()">Visible</button>
+</span>
   <span class="span"><a href="#">Forgot password?</a></span>
   <input class="submit" type="submit" value="Log in" />
   <span class="span">Don't have an account? <a href="#">Sign up</a></span>
 </form>
 
 <button routerLink="/dashboard" class="btn btn-success">Continue to Dashboard</button>
+
+<!-- <label for="">Email:</label>
+<input type="email"><br>
+<label for="">Password:</label>
+<input [type]="isVisible?'text':'password'"><br>
+<button (click)="visible()">visible</button>
+<button>login</button> -->

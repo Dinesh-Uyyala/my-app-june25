@@ -21,6 +21,6 @@ export class DirectivesComponent {
   ]
 
 
-
+  date:any= new Date();
 
 }

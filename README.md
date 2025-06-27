@@ -57,3 +57,38 @@ Topics:
 
 Project Hierarchy:
 ==================
+
+
+
+
+
+
+
+
+
+
+
+
+Data Binding:
+=============
+
+
+
+
+
+
+Directives: used to alter DOM
+===========
+1) Structural Directives
+    *ngFor, *ngIf
+
+2) Attribute Directives
+    ngClass, ngStyle
+
+
+Pipes: used to alter Data Format
+======
+ | uppercase
+ | lowercase
+ | date
+ | date:'hh:mm:ss'
