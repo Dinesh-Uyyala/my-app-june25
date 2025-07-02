@@ -9,6 +9,7 @@ import { ClockComponent } from './clock/clock.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path:'data-binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'employees',component:EmployeesComponent},
+    {path:'vehicles',component:VehiclesComponent},
   ]}, //parent Routing
   {path:'**',component:PageNotFoundComponent},//wild card routing
 ];
