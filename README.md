@@ -92,3 +92,16 @@ Pipes: used to alter Data Format
  | lowercase
  | date
  | date:'hh:mm:ss'
+
+
+ Possible API Calls:
+ ===================
+1) get Details                 get             get(URL)
+2) specific                    get             
+3) filtering                   get             get(url?filter=term)
+4) sorting                     get             get(url?sortBy=column&order=asc/desc)
+5) pagination                  get             get(url?limit=items&page=page)
+
+6) create                      post            
+7) update                      put             
+8) delete                      delete          delete(url/id) 
