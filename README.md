@@ -102,6 +102,30 @@ Pipes: used to alter Data Format
 4) sorting                     get             get(url?sortBy=column&order=asc/desc)
 5) pagination                  get             get(url?limit=items&page=page)
 
-6) create                      post            
+6) create                      post            post(url,data) 
 7) update                      put             
 8) delete                      delete          delete(url/id) 
+
+
+
+Validators:
+===========
+
+ts:
+===
+name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)])
+
+
+html:
+=====
+    <div *ngIf="CONTROLS?.touched && CONTROLS?.invalid">
+        <p *ngIf="CONTROLS?.errors?.['required']">Name should be enter</p>
+        <p *ngIf="CONTROLS?.errors?.['minlength']">Name should be minimum 6 characters</p>
+        <p *ngIf="CONTROLS?.errors?.['maxlength']">Name should be maximum 12 characters</p>
+    </div>
+
+CONTROLS:
+=========
+1) Form Group:  studentForm.get('name')
+2) Nested Form Group:  studentForm.get('address')?.get('pin')
+3) Form Array: cardsFormArray.controls[i]?.get('cvv')

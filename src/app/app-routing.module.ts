@@ -11,6 +11,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path:'employees',component:EmployeesComponent},
     {path:'vehicles',component:VehiclesComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'create-student',component:CreateStudentComponent},
   ]}, //parent Routing
   {path:'**',component:PageNotFoundComponent},//wild card routing
 ];
