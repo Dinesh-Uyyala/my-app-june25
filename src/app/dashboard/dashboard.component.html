@@ -1,7 +1,7 @@
 <div class="parent">
     <div class="left">
         <h1>Dashboard</h1>
-        <h2 routerLink="/dashboard/home">Home</h2>
+        <h2 routerLink="/dashboard">Home</h2>
         <h2 routerLink="/dashboard/clock">Clock</h2>
         <h2 routerLink="/dashboard/calculator">Calculator</h2>
         <h2 routerLink="/dashboard/data-binding">Data Binding</h2>
@@ -9,7 +9,7 @@
         <h2 routerLink="/dashboard/employees">Employees</h2>
         <h2 routerLink="/dashboard/vehicles">Vehicles</h2>
         <h2 routerLink="/dashboard/create-student">Create Student</h2>
-        <h2 routerLink="/">Logout</h2>
+        <h2 (click)="logout()">Logout</h2>
     </div>
     <div class="right">
         <router-outlet></router-outlet>

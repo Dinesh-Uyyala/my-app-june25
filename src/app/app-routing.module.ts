@@ -12,11 +12,15 @@ import { EmployeesComponent } from './employees/employees.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'home',component:HomeComponent},//child routing
+  {path:'registration',component:RegistrationComponent},
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard],children:[
+    {path:'',component:HomeComponent},//child routing
     {path:'calculator',component:CalulatorComponent},
     {path:'clock',component:ClockComponent},
     {path:'data-binding',component:DataBindingComponent},
@@ -25,6 +29,8 @@ const routes: Routes = [
     {path:'vehicles',component:VehiclesComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'create-student',component:CreateStudentComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
   ]}, //parent Routing
   {path:'**',component:PageNotFoundComponent},//wild card routing
 ];

@@ -1,16 +1,16 @@
-<form class="form">
+<form class="form" [formGroup]="loginForm">
   <span class="input-span">
     <label for="email" class="label">Email</label>
-    <input type="email" name="email" id="email"
+    <input type="email" name="email" id="email" formControlName="email"
   /></span>
   <span class="input-span">
     <label for="password" class="label">Password</label>
-    <input [type]="isVisible?'text':'password'" name="password" id="password"
+    <input [type]="isVisible?'text':'password'" name="password" id="password"  formControlName="password"
   /><button (click)="visible()">Visible</button>
 </span>
   <span class="span"><a href="#">Forgot password?</a></span>
-  <input class="submit" type="submit" value="Log in" />
-  <span class="span">Don't have an account? <a href="#">Sign up</a></span>
+<button (click)="login()" class="btn btn-primary">Login</button>
+  <span class="span">Don't have an account? <a routerLink="/registration">Registration</a></span>
 </form>
 
 <button routerLink="/dashboard" class="btn btn-success">Continue to Dashboard</button>

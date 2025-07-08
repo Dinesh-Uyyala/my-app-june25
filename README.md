@@ -103,7 +103,7 @@ Pipes: used to alter Data Format
 5) pagination                  get             get(url?limit=items&page=page)
 
 6) create                      post            post(url,data) 
-7) update                      put             
+7) update                      put             put(url/id,data)
 8) delete                      delete          delete(url/id) 
 
 
