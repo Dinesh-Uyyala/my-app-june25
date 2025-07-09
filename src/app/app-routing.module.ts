@@ -15,6 +15,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -31,6 +32,7 @@ const routes: Routes = [
     {path:'create-student',component:CreateStudentComponent},
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'parent',component:ParentComponent},
   ]}, //parent Routing
   {path:'**',component:PageNotFoundComponent},//wild card routing
 ];

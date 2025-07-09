@@ -19,6 +19,8 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { RegistrationComponent } from './registration/registration.component';
     CreateVehicleComponent,
     CreateStudentComponent,
     VehicleDetailsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
