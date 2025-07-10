@@ -21,6 +21,8 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { RegistrationComponent } from './registration/registration.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { ChildComponent } from './child/child.component';
     VehicleDetailsComponent,
     RegistrationComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component
   ],
   imports: [
     BrowserModule,
