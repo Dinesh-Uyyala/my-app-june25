@@ -23,6 +23,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { Sibling2Component } from './sibling2/sibling2.component';
     ParentComponent,
     ChildComponent,
     Sibling1Component,
-    Sibling2Component
+    Sibling2Component,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
