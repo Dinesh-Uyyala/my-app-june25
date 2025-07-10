@@ -17,6 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
 import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
+import { RatingComponent } from './rating/rating.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -35,6 +36,7 @@ const routes: Routes = [
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'parent',component:ParentComponent},
     {path:'sibling1',component:Sibling1Component},
+    {path:'rating',component:RatingComponent},
   ]}, //parent Routing
   {path:'**',component:PageNotFoundComponent},//wild card routing
 ];
