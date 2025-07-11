@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +18,7 @@ import { AuthGuard } from './auth.guard';
 import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { RatingComponent } from './rating/rating.component';
+import { PaymentsModule } from './payments/payments.module';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -37,12 +38,16 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'sibling1',component:Sibling1Component},
     {path:'rating',component:RatingComponent},
+
+    {path:'payments',
+      loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+    }
   ]}, //parent Routing
-  {path:'**',component:PageNotFoundComponent},//wild card routing
+  {path:'**',component:PageNotFoundComponent},//wild card routing 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
