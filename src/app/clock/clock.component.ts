@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-clock',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ClockComponent {
 
+  user:User={
+    name:'dinesh',
+    mobile:9849808937,
+    email:'connect@dineshuyyala.com',
+    age:29
+  }
 }
