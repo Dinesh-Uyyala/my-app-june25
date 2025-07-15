@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { VehicleDetailsComponent } from './vehicle-details.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('VehicleDetailsComponent', () => {
   let component: VehicleDetailsComponent;
@@ -8,9 +10,22 @@ describe('VehicleDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VehicleDetailsComponent ]
-    })
-    .compileComponents();
+      declarations: [VehicleDetailsComponent],
+      imports:[HttpClientTestingModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({ id: '123' }), // Mocking route parameters
+            snapshot: {
+              paramMap: {
+                get: (key: string) => '123' // Mocking snapshot access
+              }
+            }
+          }
+        }
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(VehicleDetailsComponent);
     component = fixture.componentInstance;

@@ -28,6 +28,15 @@ import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
 import { AuthInterceptor } from './auth.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialComponent } from './material/material.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatCardModule } from "@angular/material/card";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatIconModule } from "@angular/material/icon";
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +60,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     Sibling2Component,
     RatingComponent,
     CapitalDirective,
-    RupeePipe
+    RupeePipe,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +69,15 @@ import { AboutUsModule } from './about-us/about-us.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutUsModule
+    AboutUsModule,
+    BrowserAnimationsModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
   ],
   providers: [
     {
