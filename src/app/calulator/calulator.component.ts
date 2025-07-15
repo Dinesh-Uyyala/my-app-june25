@@ -14,15 +14,16 @@ export class CalulatorComponent {
     this.result=this.num1+this.num2;
     console.log(this.result);
   }
+sub() {
+  this.result = this.num1 - this.num2;
+}
 
-  
-  sub(){
+mul() {
+  this.result = this.num1 * this.num2;
+}
 
-  }
-  mul(){
+div() {
+  this.result = this.num2 !== 0 ? this.num1 / this.num2 : Infinity;
+}
 
-  }
-  div(){
-
-  }
 }

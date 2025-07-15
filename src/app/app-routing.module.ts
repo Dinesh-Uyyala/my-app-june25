@@ -19,6 +19,7 @@ import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { RatingComponent } from './rating/rating.component';
 import { PaymentsModule } from './payments/payments.module';
+import { MaterialComponent } from './material/material.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -38,7 +39,7 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'sibling1',component:Sibling1Component},
     {path:'rating',component:RatingComponent},
-
+    {path:'material',component:MaterialComponent},
     {path:'payments',
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
     }

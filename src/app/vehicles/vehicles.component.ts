@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { VehiclesService } from '../vehicles.service';
+import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-vehicles',
@@ -8,7 +10,9 @@ import { VehiclesService } from '../vehicles.service';
 })
 export class VehiclesComponent {
   vehicles:any[]=[];
-  
+  constructor(private _vehiclesService:VehiclesService,public dialogRef: MatDialogRef<VehiclesComponent>){
+    this.loadVehicles();
+  }
   term:string='';
   search(){
     // alert(this.term);
@@ -49,9 +53,14 @@ export class VehiclesComponent {
       }
     )
   }
-constructor(private _vehiclesService:VehiclesService){
-    this.loadVehicles();
-  }
+
+
+
+  // openLink(event: MouseEvent): void {
+  //   this._bottomSheetRef.dismiss();
+  //   event.preventDefault();
+  // }
+  
   loadVehicles(){
     this._vehiclesService.getVehicles().subscribe(
       (data:any)=>{
