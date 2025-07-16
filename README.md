@@ -63,6 +63,13 @@ Git:
     --> approve
     --> merge(if any conflicts clear conflicts and merge)
 
+6) clearing conflicts
+    --> git branch
+    --> pull from parent branch
+    --> clear conflicts
+    --> pullrequest for merge
+    
+
 
 Topics:
 =======
