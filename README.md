@@ -68,7 +68,15 @@ Git:
     --> pull from parent branch
     --> clear conflicts
     --> pullrequest for merge
-    
+
+7) git log
+
+8) shift branches
+    --> commit and shift
+    --> git stash --include-untracked
+    --> move to brand and do changes
+    --> after come back  (git stash pop)
+
 
 
 Topics:
