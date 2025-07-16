@@ -141,3 +141,18 @@ Customs:
 5) Custom API / Dummy JSON
 6) Custom Command
 7) Interceptor
+
+
+
+
+
+Life cycle hooks:
+=================
+1) ngonchanges --> parent-child values (@input())
+2) ngoninit --> initialize(begining)
+3) ngdocheck --> check for the changes
+4) ngafterviewinit --> when view renders in template
+5) ngafterviewchecked --> when render changes in template
+6) ngaftercontentinit --> whenever content passes
+7) ngaftercontentchecked --> whenever content changed
+8) ngondestroy --> whenever coming out of component
