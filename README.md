@@ -86,6 +86,11 @@ Git:
     --> git pull origin feature/one
     --> git pull origin feature/two
 
+11) cherry-pick
+    --> commit code
+    --> shift to new branch
+    --> git cherry-pick kjh77687
+
 Topics:
 =======
 
