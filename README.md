@@ -77,7 +77,14 @@ Git:
     --> move to brand and do changes
     --> after come back  (git stash pop)
 
+9) Delete commit from branch
+    --> git log --> hgv2cgf265 kjh77687
+    --> git reset  kjh77687(delete)
 
+10) two branches code into one branch
+    --> create 3rd branch
+    --> git pull origin feature/one
+    --> git pull origin feature/two
 
 Topics:
 =======
