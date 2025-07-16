@@ -37,6 +37,10 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatCardModule } from "@angular/material/card";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatIconModule } from "@angular/material/icon";
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { StoreModule } from '@ngrx/store';
+import { countReducer } from './store/counter.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +65,9 @@ import { MatIconModule } from "@angular/material/icon";
     RatingComponent,
     CapitalDirective,
     RupeePipe,
-    MaterialComponent
+    MaterialComponent,
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +84,7 @@ import { MatIconModule } from "@angular/material/icon";
     MatCardModule,
     MatDialogModule,
     MatIconModule,
+    StoreModule.forRoot({counter:countReducer}, {}),
   ],
   providers: [
     {
