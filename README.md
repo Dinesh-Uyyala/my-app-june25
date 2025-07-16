@@ -51,8 +51,17 @@ Git:
         ->git push --set-upstream origin master -f (for the 1st time)
 
 
+4) Branching
+    --> create a branch in gitHub
+    --> git fetch
+    --> git checkout
+    check:
+        --> git branch
 
-
+5) Pull Request
+    --> Create pull request
+    --> approve
+    --> merge(if any conflicts clear conflicts and merge)
 
 
 Topics:
