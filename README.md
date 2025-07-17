@@ -196,3 +196,4 @@ Life cycle hooks:
 6) ngaftercontentinit --> whenever content passes
 7) ngaftercontentchecked --> whenever content changed
 8) ngondestroy --> whenever coming out of component
+

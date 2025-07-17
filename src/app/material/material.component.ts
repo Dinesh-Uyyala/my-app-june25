@@ -18,13 +18,13 @@ export class MaterialComponent {
   constructor(private _bottomSheet: MatBottomSheet,private dialog:MatDialog) {}
 
   openBottomSheet(): void {
-    this._bottomSheet.open(VehiclesComponent);
+    // this._bottomSheet.open(VehiclesComponent);
   }
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(VehiclesComponent, {
-      width: '1050px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
+    // this.dialog.open(VehiclesComponent, {
+    //   width: '1050px',
+    //   enterAnimationDuration,
+    //   exitAnimationDuration,
+    // });
   }
 }
