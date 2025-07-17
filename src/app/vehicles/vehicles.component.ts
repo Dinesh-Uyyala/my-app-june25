@@ -10,7 +10,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class VehiclesComponent {
   vehicles:any[]=[];
-  constructor(private _vehiclesService:VehiclesService,public dialogRef: MatDialogRef<VehiclesComponent>){
+  constructor(private _vehiclesService:VehiclesService){
     this.loadVehicles();
   }
   term:string='';
