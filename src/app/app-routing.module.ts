@@ -20,6 +20,7 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { RatingComponent } from './rating/rating.component';
 import { PaymentsModule } from './payments/payments.module';
 import { MaterialComponent } from './material/material.component';
+import { SignalsComponent } from './signals/signals.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},//default routing
@@ -40,6 +41,7 @@ const routes: Routes = [
     {path:'sibling1',component:Sibling1Component},
     {path:'rating',component:RatingComponent},
     {path:'material',component:MaterialComponent},
+    {path:'signals',component:SignalsComponent},
     {path:'payments',
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
     }
