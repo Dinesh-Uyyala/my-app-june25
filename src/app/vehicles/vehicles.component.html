@@ -1,6 +1,6 @@
 <h1>Vehicles</h1>
 
-<input type="text" [(ngModel)]="term" (keyup)="search()" placeholder="Enter text to search">
+<input type="text" [formControl]="searchControl" (keyup)="search()" placeholder="Enter text to search">
 
 <select [(ngModel)]="column">
     <option>Vehicle</option>

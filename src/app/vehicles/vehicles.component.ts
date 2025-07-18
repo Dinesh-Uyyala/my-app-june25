@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { VehiclesService } from '../vehicles.service';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { MatDialogRef } from '@angular/material/dialog';
+import { FormControl, FormGroup } from '@angular/forms';
+import { debounceTime, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-vehicles',
@@ -14,16 +16,30 @@ export class VehiclesComponent {
     this.loadVehicles();
   }
   term:string='';
+
+    searchControl=new FormControl();
+
   search(){
-    // alert(this.term);
-    this._vehiclesService.getFilteredVehicles(this.term).subscribe(
-      (data:any)=>{
-        console.log(data);
-        this.vehicles=data;
+    // alert(this.searchControl);
+    // this._vehiclesService.getFilteredVehicles(this.term).subscribe(
+    //   (data:any)=>{
+    //     console.log(data);
+    //     this.vehicles=data;
+    //   },(err:any)=>{
+    //     alert("Internal Server Error!");
+    //   }
+    // )
+
+    this.searchControl.valueChanges.pipe(
+      debounceTime(400),
+      switchMap(search=>this._vehiclesService.getFilteredVehicles(search))).subscribe(
+        (data:any)=>{
+          console.log(data);
+          this.vehicles=data;
       },(err:any)=>{
         alert("Internal Server Error!");
       }
-    )
+      )
   }
 
   column:string='';

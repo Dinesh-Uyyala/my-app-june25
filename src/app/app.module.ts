@@ -41,6 +41,10 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { StoreModule } from '@ngrx/store';
 import { countReducer } from './store/counter.reducer';
+import { SignalsComponent } from './signals/signals.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContentComponent } from './content/content.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +71,11 @@ import { countReducer } from './store/counter.reducer';
     RupeePipe,
     MaterialComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    SignalsComponent,
+    HeaderComponent,
+    FooterComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

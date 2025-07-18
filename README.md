@@ -197,3 +197,33 @@ Life cycle hooks:
 7) ngaftercontentchecked --> whenever content changed
 8) ngondestroy --> whenever coming out of component
 
+
+
+RxJs Operators:
+===============
+from, of --> creational operators
+pipe --> combine the value
+map --> to alter every element or value
+filter --> to select certain data
+
+return this.http.get(API)--API call
+
+forkJoin --> parallel API Calls
+return ForkJoin(
+    this.http.get(API1),
+    this.http.get(API2),
+    this.http.get(API3),
+    this.http.get(API4)
+)
+
+concatMap --> sequential API calls
+return cancatMap(
+    this.http.get(API1),
+    this.http.get(API2),
+    this.http.get(API3),
+    this.http.get(API4)
+)
+
+switchMap --> switch between API calls (it calls new API call)
+exhaustMap --> switch between API calls (it rejects new API call)
+debouncetime --> delay API calls
